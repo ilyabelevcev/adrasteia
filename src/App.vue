@@ -1,7 +1,10 @@
 <template>
    <div class="content-wrapper">
-      <headbar/>
-      <footbar/>
+      <headbar 
+         :links="links"/>
+      <footbar 
+         :socials="socials"
+         :year="year"/>
    </div>
 </template>
 
@@ -12,7 +15,43 @@
       components: {
          Headbar,
          Footbar,
-      }
+      },
+      data() {
+         return {
+            links: [
+               {id:0, name: 'Главная', scrollTo: '#main'},
+               {id:1, name: 'О нас', scrollTo: '#about'},
+               {id:2, name: 'Услуги', scrollTo: '#services'},
+               {id:3, name: 'Как мы работаем', scrollTo: '#working'},
+               {id:4, name: 'Клиенты', scrollTo: '#clients'},
+               {id:5, name: 'Контакты', scrollTo: '#contacts'},
+            ],
+            socials: [
+               {
+                  id:0, 
+                  name: 'whatsapp', 
+                  reference: '#', 
+                  icon: '', 
+                  classItem: 'whatsapp'
+               },
+               {
+                  id:1, 
+                  name: 'telegram', 
+                  reference: '#', 
+                  icon: '', 
+                  classItem: 'telegram'
+               },
+               {
+                  id:2, 
+                  name: 'adrasteia@mail.com', 
+                  reference: 'mailto:#', 
+                  icon: '', 
+                  classItem: 'email'
+               },
+            ],
+            year: new Date(),
+         }
+      },
    }
 </script>
 

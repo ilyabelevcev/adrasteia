@@ -2,7 +2,7 @@
    <header class="header" id="header">
       <div class="container header__container">
          <div class="header__logo">
-            <img src="../assets/img/logo.svg" alt="Adrasteia" class="header__logo-img">
+            <img src="@/assets/img/logo.svg" alt="Adrasteia" class="header__logo-img">
          </div>
          <nav class="header__nav">
             <ul class="header__nav-list">
@@ -17,7 +17,7 @@
          </nav>
          <div class="header__request">
             <button class="header__request-btn">
-               Оставить заявку
+               Оформить заявку
                <span class="header__btn-circle">
                   <svg class="header__btn-plus" height="16px" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" width="16px" xml:spa0ce="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                      <g>
@@ -66,6 +66,7 @@
       color: #142251;
       line-height: 1;
       letter-spacing: -0.03em;
+      transition: color 0.2s linear;
    }
    .header__request-btn{
       font-weight: inherit;
@@ -73,8 +74,24 @@
       color: #213887;
       display: flex;
       align-items: center;
+      transition: color 0.2s linear;
    }
-   .header__request-btn .header__btn-circle{
+   .header__request-btn:hover{
+      color: #142251;
+   }
+   .header__request-btn:hover .header__btn-circle{
+      background-color: transparent;
+   }
+   .header__btn-circle{
+      transition: background-color 0.2s linear;
+   }
+   .header__btn-plus g line{
+      transition: stroke 0.2s linear;
+   }
+   .header__request-btn:hover .header__btn-plus g line{
+      stroke: #142251 !important;
+   }
+   .header__btn-circle{
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,5 +100,10 @@
       width: 34px;
       height: 34px;
       background-color: #213887;
+   }
+   /* hover */
+   .header__item-link:hover{
+      color: #213887;
+      border-bottom: 2px solid #213887;
    }
 </style>

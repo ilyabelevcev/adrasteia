@@ -31,22 +31,22 @@
                   id:0, 
                   name: 'whatsapp', 
                   reference: '#', 
-                  icon: '', 
-                  classItem: 'whatsapp'
+                  iconName: 'whatsapp',
+                  iconURL: require('@/assets/img/whatsappIcon.svg'), 
                },
                {
                   id:1, 
                   name: 'telegram', 
                   reference: '#', 
-                  icon: '', 
-                  classItem: 'telegram'
+                  iconURL: require('@/assets/img/telegramIcon.svg'), 
+                  iconName: 'telegram'
                },
                {
                   id:2, 
                   name: 'adrasteia@mail.com', 
                   reference: 'mailto:#', 
-                  icon: '', 
-                  classItem: 'email'
+                  iconName: 'email',
+                  iconURL: null,
                },
             ],
             year: new Date(),

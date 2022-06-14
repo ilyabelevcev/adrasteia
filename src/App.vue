@@ -9,8 +9,8 @@
 </template>
 
 <script>
-   import Headbar from './components/Headbar.vue'
-   import Footbar from './components/Footbar.vue'
+   import Headbar from '@/components/Headbar.vue'
+   import Footbar from '@/components/Footbar.vue'
    export default {
       components: {
          Headbar,
